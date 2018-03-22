@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-image: url("b.jpg");  
+            background-size: cover;          
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 25px;
+            text-align: center;
+        }
+        *{
+            padding: 5px;
+            
+            font-weight: bold;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center; ">Addition Of Two Numbers</h1>
+    <h3> Please enter numbers to add!</h2>
+        <p></p>
+        <b>A:</b> &nbsp;
+        <input type="number" id="a">
+        <p></p>
+        <b>B:</b> &nbsp;
+        <input type="number" id="b">
+        <p></p>
+        
+        <button type="button" onclick="myFunction()" style="padding-left:20px;padding-right:20px;font-size:30px;;font-weight:bold;">Add</button>
+
+        <p></p>
+        <span id="answer"></span>
+        
+        <script src="cordova.js"></script>
+        <script>
+            function myFunction() {
+
+                const a = document.getElementById("a").value;
+                const b = document.getElementById("b").value;
+
+                var o = (+a + +b);
+
+                document.getElementById("answer").innerHTML = "A + B = " + o;                    
+                                                
+            }
+        </script>
+</body>
+
+</html>
